@@ -1,13 +1,3 @@
-## Configuration
-
-This example uses this [sample configuration file](https://github.com/m3db/m3/raw/master/src/dbnode/config/m3dbnode-local-etcd.yml) by default.
-
-The file groups configuration into `coordinator` or `db` sections that represent the `M3Coordinator` and `M3DB` instances of single-node cluster.
-
-{{% notice tip %}}
-You can find more information on configuring M3DB in the [operational guides section](/operational_guide/).
-{{% /notice %}}
-
 ## Organizing Data with Placements and Namespaces
 
 A time series database (TSDBs) typically consist of one node (or instance) to store metrics data. This setup is simple to use but has issues with scalability over time as the quantity of metrics data written and read increases.

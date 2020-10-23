@@ -84,4 +84,14 @@ Depending on your operating system setup, you might need to prefix the command w
 When running the command above on macOS you may see errors about "too many open files." To fix this in your current terminal, use `ulimit` to increase the upper limit, for example `ulimit -n 10240`.
 {{% /notice %}}
 
+## Configuration
+
+This example uses this [sample configuration file](https://github.com/m3db/m3/raw/master/src/dbnode/config/m3dbnode-local-etcd.yml) by default.
+
+The file groups configuration into `coordinator` or `db` sections that represent the `M3Coordinator` and `M3DB` instances of single-node cluster.
+
+{{% notice tip %}}
+You can find more information on configuring M3DB in the [operational guides section](/operational_guide/).
+{{% /notice %}}
+
 {{% fileinclude file="quickstart/common-steps.md" %}}
