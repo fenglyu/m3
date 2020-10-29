@@ -124,7 +124,7 @@ You configure each M3 component by passing the location of a YAML file with the 
 The file groups configuration into `coordinator` or `db` sections that represent the `M3Coordinator` and `M3DB` instances of single-node cluster.
 
 {{% notice tip %}}
-You can find more information on configuring M3DB in the [operational guides section](/operational_guide/).
+You can find more information on configuring M3DB in the [operational guides section](/docs/operational_guide/).
 {{% /notice %}}
 
 {{% notice note %}}
@@ -249,11 +249,11 @@ If you need to setup multiple namespaces, you can run the command above above mu
 
 ### Replication factor
 
-We recommend a replication factor of **3**, with each replica spread across failure domains such as a physical server rack, data center or availability zone. Read our [replication factor recommendations](/operational_guide/replication_and_deployment_in_zones) for more details.
+We recommend a replication factor of **3**, with each replica spread across failure domains such as a physical server rack, data center or availability zone. Read our [replication factor recommendations](/docs/operational_guide/replication_and_deployment_in_zones) for more details.
 
 ### Shards
 
-Read the [placement configuration guide](/operational_guide/placement_configuration) to determine the appropriate number of shards to specify.
+Read the [placement configuration guide](/docs/operational_guide/placement_configuration) to determine the appropriate number of shards to specify.
 
 {{% fileinclude file="getting-started/common-steps.md" %}}
 
