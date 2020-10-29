@@ -35,7 +35,6 @@ M3 uses [etcd](https://etcd.io/) as a distributed key-value storage for the foll
 
 -   Update cluster configuration in realtime
 -   Manage placements for distributed and sharded clusters
--   Perform leader-election in M3Aggregator
 
 {{% notice note %}}
 M3 storage nodes have an embedded etcd server you can use for small test clusters which we call a **Seed Node** when run this way. See the `etcdClusters` section of [this example configuration file](https://github.com/m3db/m3/blob/master/src/dbnode/config/m3dbnode-local-etcd.yml).
