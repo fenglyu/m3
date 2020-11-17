@@ -1,5 +1,5 @@
 ---
-linktitle: "Creating a Kubernetes Cluster"
+linktitle: "Kubernetes"
 weight: 1
 ---
 

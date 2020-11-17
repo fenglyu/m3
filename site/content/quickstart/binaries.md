@@ -1,5 +1,5 @@
 ---
-linktitle: "Binaries Quickstart"
+linktitle: "Binaries"
 weight: 3
 ---
 

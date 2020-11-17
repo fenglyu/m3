@@ -1,5 +1,5 @@
 ---
-linktitle: "Creating a Manual Cluster"
+linktitle: "Binaries"
 weight: 2
 ---
 
@@ -21,8 +21,8 @@ Here's a typical M3 deployment:
 
 An M3 deployment typically has two main node types:
 
--   **{{< glossary_tooltip text="Coordinator node" term_id="m3coordinator" >}}**: `m3coordinator` nodes coordinate reads and writes across all nodes in the cluster. It's a lightweight process, and does not store any data. This role typically runs alongside a Prometheus instance, or is part of a collector agent.
--   **{{< glossary_tooltip text="Storage node" term_id="m3dbnode" >}}**: The `m3dbnode` processes are the workhorses of M3, they store data and serve reads and writes.
+-   **Coordinator node**: `m3coordinator` nodes coordinate reads and writes across all nodes in the cluster. It's a lightweight process, and does not store any data. This role typically runs alongside a Prometheus instance, or is part of a collector agent.
+-   **Storage node**: The `m3dbnode` processes are the workhorses of M3, they store data and serve reads and writes.
 
 And exposes two ports:
 
@@ -35,7 +35,6 @@ M3 uses [etcd](https://etcd.io/) as a distributed key-value storage for the foll
 
 -   Update cluster configuration in realtime
 -   Manage placements for distributed and sharded clusters
--   Perform leader-election in M3Aggregator
 
 {{% notice note %}}
 M3 storage nodes have an embedded etcd server you can use for small test clusters which we call a **Seed Node** when run this way. See the `etcdClusters` section of [this example configuration file](https://github.com/m3db/m3/blob/master/src/dbnode/config/m3dbnode-local-etcd.yml).

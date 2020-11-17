@@ -1,5 +1,5 @@
 ---
-linktitle: "Creating a Docker Cluster"
+linktitle: "Docker"
 weight: 3
 ---
 # Creating an M3 Cluster with Docker
@@ -20,8 +20,8 @@ Here's a typical M3 deployment:
 
 An M3 deployment typically has two main node types:
 
--   **{{< glossary_tooltip text="Coordinator node" term_id="m3coordinator" >}}**: `m3coordinator` nodes coordinate reads and writes across all nodes in the cluster. It's a lightweight process, and does not store any data. This role typically runs alongside a Prometheus instance, or is part of a collector agent.
--   **{{< glossary_tooltip text="Storage node" term_id="m3dbnode" >}}**: The `m3dbnode` processes are the workhorses of M3, they store data and serve reads and writes.
+-   **Coordinator node**: `m3coordinator` nodes coordinate reads and writes across all nodes in the cluster. It's a lightweight process, and does not store any data. This role typically runs alongside a Prometheus instance, or is part of a collector agent.
+-   **Storage node**: The `m3dbnode` processes are the workhorses of M3, they store data and serve reads and writes.
 
 And exposes two ports:
 

@@ -2,14 +2,14 @@
 
 A time series database (TSDBs) typically consist of one node (or instance) to store metrics data. This setup is simple to use but has issues with scalability over time as the quantity of metrics data written and read increases.
 
-As a distributed TSDB, M3 helps solve this problem by spreading metrics data, and demand for that data, across multiple nodes in a cluster. M3 does this by splitting data into segments that match certain criteria (such as above a certain value) across nodes into {{< glossary_tooltip text="shards" term_id="shard" >}}.
+As a distributed TSDB, M3 helps solve this problem by spreading metrics data, and demand for that data, across multiple nodes in a cluster. M3 does this by splitting data into segments that match certain criteria (such as above a certain value) across nodes into shards.
 
 <!-- TODO: Find an image -->
 
 If you've worked with a distributed database before, then these concepts are probably familiar to you, but M3 uses different terminology to represent some concepts.
 
--   Every cluster has **one** {{< glossary_tooltip text="placement" term_id="placement" >}} that maps shards to nodes in the cluster.
--   A cluster can have **0 or more** {{< glossary_tooltip text="namespaces" term_id="namespace" >}} that are similar conceptually to tables in other databases, and each node serves every namespace for the shards it owns.
+-   Every cluster has **one** placement that maps shards to nodes in the cluster.
+-   A cluster can have **0 or more** namespaces that are similar conceptually to tables in other databases, and each node serves every namespace for the shards it owns.
 
 <!-- TODO: Image -->
 
