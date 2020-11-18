@@ -91,7 +91,7 @@ This example uses this [sample configuration file](https://github.com/m3db/m3/ra
 The file groups configuration into `coordinator` or `db` sections that represent the `M3Coordinator` and `M3DB` instances of single-node cluster.
 
 {{% notice tip %}}
-You can find more information on configuring M3DB in the [operational guides section](/operational_guide/_index.md).
+You can find more information on configuring M3DB in the [operational guides section](/docs/operational_guide).
 {{% /notice %}}
 
 {{% fileinclude file="quickstart/common-steps.md" %}}
