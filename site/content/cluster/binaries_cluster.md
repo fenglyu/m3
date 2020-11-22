@@ -36,10 +36,6 @@ M3 uses [etcd](https://etcd.io/) as a distributed key-value storage for the foll
 -   Update cluster configuration in realtime
 -   Manage placements for distributed and sharded clusters
 
-{{% notice note %}}
-M3 storage nodes have an embedded etcd server you can use for small test clusters which we call a **Seed Node** when run this way. See the `etcdClusters` section of [this example configuration file](https://github.com/m3db/m3/blob/master/src/dbnode/config/m3dbnode-local-etcd.yml).
-{{% /notice %}}
-
 ## Download and Install a Binary
 
 You can download the latest release as [pre-compiled binaries from the M3 GitHub page](https://github.com/m3db/m3/releases/latest). Inside the expanded archive are binaries for `m3dbnode`, which combines a coordinator and storage node, and a binary for `m3coordinator`, which is a standalone coordinator node.
