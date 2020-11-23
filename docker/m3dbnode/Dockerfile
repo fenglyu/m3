@@ -3,11 +3,17 @@ FROM golang:1.13-alpine3.11 AS builder
 LABEL maintainer="The M3DB Authors <m3db@googlegroups.com>"
 
 # Install deps
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+RUN apk update
+
 RUN apk add --update git make bash
 
 # Add source code
 RUN mkdir -p /go/src/github.com/m3db/m3
 ADD . /go/src/github.com/m3db/m3
+
+# set env
+RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 # Build m3dbnode binary
 RUN cd /go/src/github.com/m3db/m3/ && \
@@ -21,6 +27,9 @@ LABEL maintainer="The M3DB Authors <m3db@googlegroups.com>"
 ENV GODEBUG madvdontneed=1
 
 EXPOSE 2379/tcp 2380/tcp 7201/tcp 7203/tcp 9000-9004/tcp
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+RUN apk update
 
 RUN apk add --no-cache curl jq
 
