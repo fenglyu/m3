@@ -257,20 +257,20 @@ spec:
       labels:
         app: m3dbnode
     spec:
-      tolerations:
-        - key: "dedicated-m3db"
-          effect: NoSchedule
-          operator: Exists
-      affinity:
-        nodeAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - preference:
-              matchExpressions:
-              - key: m3db.io/dedicated-m3db
-                operator: In
-                values:
-                  - "true"
-            weight: 10
+#      tolerations:
+#        - key: "dedicated-m3db"
+#          effect: NoSchedule
+#          operator: Exists
+#      affinity:
+#        nodeAffinity:
+#          preferredDuringSchedulingIgnoredDuringExecution:
+#          - preference:
+#              matchExpressions:
+#              - key: m3db.io/dedicated-m3db
+#                operator: In
+#                values:
+#                  - "true"
+#            weight: 10
       containers:
       - name: m3db
         image: quay.io/m3/m3dbnode:latest

@@ -106,15 +106,15 @@ produce a lightweight production image from a single Dockerfile. Accordingly, it
 17.05 or later to build.
 
 ```
-docker build -f docker/m3dbnode/Dockerfile -t m3dbnode:$(git rev-parse head) .
-docker run --name m3dbnode m3dbnode:$(git rev-parse head)
+docker build -f docker/m3dbnode/Dockerfile -t m3dbnode:$(git rev-parse --short HEAD) .
+docker run --name m3dbnode m3dbnode:$(git rev-parse --short HEAD)
 ```
 
 If you wish to build an image with the source code included you can stop the build after the
 `builder` stage:
 
 ```
-docker build -f docker/m3dbnode/Dockerfile -t m3dbnode:$(git rev-parse head) --target builder .
+docker build -f docker/m3dbnode/Dockerfile -t m3dbnode:$(git rev-parse --short HEAD) --target builder .
 ```
 
 ## Configuration

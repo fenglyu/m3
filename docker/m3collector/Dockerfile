@@ -3,6 +3,9 @@ FROM golang:1.13-alpine3.11 AS builder
 LABEL maintainer="The M3DB Authors <m3db@googlegroups.com>"
 
 # Install deps
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+RUN apk update
+# Install deps
 RUN apk add --update git make bash
 
 # Add source code

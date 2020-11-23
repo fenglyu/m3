@@ -1,6 +1,11 @@
 FROM alpine:3.11
 LABEL maintainer="The M3DB Authors <m3db@googlegroups.com>"
 
+
+# Install deps
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+RUN apk update
+
 RUN apk add --no-cache procps && echo $'#!/bin/ash\n\
 set -e\n\
 while true; do\n\
