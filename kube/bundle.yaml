@@ -273,7 +273,8 @@ spec:
 #            weight: 10
       containers:
       - name: m3db
-        image: quay.io/m3/m3dbnode:latest
+#        image: quay.io/m3/m3dbnode:latest
+        image: quay.io/m3/m3dbnode:v1.0.0-rc.0
         # Allows m3dbnode to raise its own file limits. Comment this out if you
         # have a restrictive Pod Security Policy or similar enforcement
         # mechanisms.
